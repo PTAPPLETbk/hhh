@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Investasi Aplikasi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #76cd26;
+            padding: 15px;
+            text-align: center;
+            color: white;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .navbar-logo {
+            width: 40px; /* Ukuran logo */
+            height: auto;
+            margin-right: 10px; /* Jarak antara logo dan teks */
+        }
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 24px; /* Ukuran font untuk teks navbar */
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .product-card {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s;
+            overflow: hidden;
+        }
+
+        .product-card img {
+            width: 150px;
+            height: auto;
+            object-fit: contain;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .product-info {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .product-info h3 {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .product-info p {
+            color: #777;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+        .price {
+            font-size: 16px;
+            color: #0073fe;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .buy-button {
+            background-color: #76cd26;
+            color: white;
+            border: 2px solid #76cd26;
+            padding: 8px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease-in-out;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        .buy-button:hover {
+            background-color: #64b11f;
+            color: white;
+            border-color: #64b11f;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #777;
+            padding: 20px;
+            background-color: #f4f7fc;
+            border-top: 1px solid #e1e1e1;
+        }
+
+        .footer a {
+            color: #0073fe;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* New section for the bottom buttons */
+        .bottom-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            padding: 10px 0;
+        }
+
+        .bottom-buttons a {
+            background-color: transparent;
+            color: #000000;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            border: 2px solid #6efa2d;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .bottom-buttons a:hover {
+            background-color: #3ee73e;
+            color: white;
+            border-color: #aae49b;
+        }
+
+        /* Responsive design */
+        @media (max-width: 1024px) {
+            .product-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .product-list {
+                grid-template-columns: 1fr;
+            }
+
+            .product-card {
+                flex-direction: row;
+                align-items: center;
+                text-align: left;
+                padding: 10px;
+            }
+
+            .product-card img {
+                width: 80px;
+                margin: 0 15px 0 0;
+            }
+
+            .product-info {
+                flex-grow: 1;
+                text-align: left;
+            }
+
+            .buy-button {
+                width: 60%;
+            }
+
+            .navbar {
+                padding: 10px;
+            }
+
+            .product-info h3 {
+                font-size: 16px;
+            }
+
+            .price {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <img src="logo.png" alt="Logo" class="navbar-logo">
+    <h1>Investasi</h1>
+</div>
+
+<div class="container">
+    <h2>INVESTASI PT.APPLE Tbk</h2>
+    <div class="product-list">
+        <!-- Product 1 -->
+        <div class="product-card">
+            <img src="forza.jpg" alt="Produk 1">
+            <div class="product-info">
+                <h3>IPHONE 8 PLUS</h3>
+                <p class="price">Harga: IDR 65,000</p>
+                <p>Masa Sewa: 15 Hari</p>
+                <p>Pendapatan Harian IDR 25,400</p>
+                <p>Total Pendapatan IDR 381,000</p>
+                <button class="buy-button" onclick="window.location.href='beli1.html'">Investasi Sekarang</button>
+            </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="product-card">
+            <img src="adv.jpg" alt="Produk 2">
+            <div class="product-info">
+                <h3>IPHONE XR</h3>
+                <p class="price">Harga: IDR 210,000</p>
+                <p>Masa Sewa: 15 Hari</p>
+                <p>Pendapatan Harian IDR 78,600</p>
+                <p>Total Pendapatan IDR 1,179,000</p>
+                <button class="buy-button" onclick="window.location.href='beli2.html'">Investasi Sekarang</button>
+            </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="product-card">
+            <img src="verza.jpg" alt="Produk 3">
+            <div class="product-info">
+                <h3>IPHONE 11</h3>
+                <p class="price">Harga: IDR 820,000</p>
+                <p>Masa Sewa: 15 Hari</p>
+                <p>Pendapatan Harian IDR 290,700</p>
+                <p>Total Pendapatan IDR 4,360,500</p>
+                <button class="buy-button" onclick="window.location.href='beli3.html'">Investasi Sekarang</button>
+            </div>
+        </div>
+        <!-- Product 4 -->
+        <div class="product-card">
+            <img src="cb150x.jpg" alt="Produk 4">
+            <div class="product-info">
+                <h3>IPHONE 12</h3>
+                <p class="price">Harga: IDR 1,370,000</p>
+                <p>Masa Sewa: 15 Hari</p>
+                <p>Pendapatan Harian IDR 385,200</p>
+                <p>Total Pendapatan IDR 5,778,000</p>
+                <button class="buy-button" onclick="window.location.href='beli4.html'">Investasi Sekarang</button>
+            </div>
+        </div>
+        <!-- Product 5 -->
+        <div class="product-card">
+            <img src="cbr150.jpg" alt="Produk 5">
+            <div class="product-info">
+                <h3>IPHONE 13</h3>
+                <p class="price">Harga: IDR 2,350,000</p>
+                <p>Masa Sewa: 15 Hari</p>
+                <p>Pendapatan Harian IDR 612,500</p>
+                <p>Total Pendapatan IDR 9,187,500</p>
+                <button class="buy-button" onclick="window.location.href='beli5.html'">Investasi Sekarang</button>
+            </div>
+        </div>
+        <!-- Product 6 -->
+        <div class="product-card">
+            <img src="cbr250r.jpg" alt="Produk 6">
+            <div class="product-info">
+                <h3>IPHONE 14</h3>
+                <p class="price">Harga: IDR 3,200,000</p>
+                <p>Masa Sewa: 15 Hari</p>
+                <p>Pendapatan Harian IDR 890,000</p>
+                <p>Total Pendapatan IDR 13,350,000</p>
+                <button class="buy-button" onclick="window.location.href='beli6.html'">Investasi Sekarang</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-buttons">
+        <a href="#">Lihat Detail Produk</a>
+        <a href="#">Cari Produk Lain</a>
+    </div>
+</div>
+
+<div class="footer">
+    <p>&copy; 2024 Investasi PT.APPLE Tbk. All rights reserved.</p>
+</div>
+
+</body>
+</html>
